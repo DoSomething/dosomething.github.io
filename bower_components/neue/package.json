@@ -1,0 +1,35 @@
+{
+  "name": "neue",
+  "version": "5.3.4",
+  "license": "MIT",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DoSomething/neue.git"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower install && ./node_modules/.bin/grunt build",
+    "test": "./node_modules/.bin/grunt travis"
+  },
+  "devDependencies": {
+    "bower": "^1.3.3",
+    "glob": "^3.2.9",
+    "grunt": "^0.4.1",
+    "grunt-bump": "^0.0.14",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-jshint": "^0.7.1",
+    "grunt-contrib-qunit": "^0.3.0",
+    "grunt-contrib-requirejs": "^0.4.3",
+    "grunt-contrib-watch": "^0.5.3",
+    "grunt-modernizr": "^0.5.2",
+    "grunt-sass": "^0.11.0",
+    "grunt-scss-lint": "^0.1.11",
+    "jshint-stylish": "^0.1.5",
+    "load-grunt-config": "^0.8.0",
+    "time-grunt": "^0.3.2"
+  }
+}

@@ -1,0 +1,155 @@
+// Module class for tile blocks that can be placed in multiple contexts on a page. Specifically used for campaign tiles, but can be used for other content as well.
+// A tile block usually contains an image with a title and a tagline.
+//
+// Styleguide Tile
+
+.tile {
+  > .wrapper {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+
+.tile--figure {
+  padding-bottom: 27px;
+  text-align: center;
+
+  img {
+    @include fluid-image();
+    margin: 0 auto 18px;
+
+    @include media($desktop) {
+      max-width: 100%;
+    }
+  }
+
+  .__title {
+    color: $dark-gray;
+    line-height: 1.1;
+    margin: 0 0 9px;
+  }
+
+  .__description {
+    line-height: 1.2;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+
+.tile--campaign {
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+
+  > .wrapper {
+    background-color: #000;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &:before {
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: 5;
+      @include linear-gradient(rgba(#000, 0) 40%, rgba(#000, .2) 70%, rgba(#000, .5) 87%, rgba(#000, .85) 100%);
+    }
+  }
+
+  .no-cssgradients & {
+    > .wrapper {
+      &:before {
+        background: transparent neue-asset-url("images/fallbacks/black-gradient.png") 0 bottom repeat-x;
+      }
+    }
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    z-index: 1;
+  }
+
+  // Should be an element and not a modifier to the tile.
+  // Will remove tile--meta once the theme markup is updated, but adding both for now so it doesn't break things!
+  .tile--meta,
+  .tile__meta {
+    bottom: 0;
+    color: #fff;
+    padding: 18px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
+    .no-cssgradients & {
+      background: transparent neue-asset-url("images/fallbacks/black-gradient.png") 0 bottom repeat-x;
+    }
+  }
+
+  .__flag {
+    color: #000;
+    font-size: 14px;
+    font-weight: $weight-sbold;
+    left: 0;
+    line-height: 1;
+    padding: em(4, 14) em(8, 14);
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    z-index: 15;
+
+    @include media($desktop) {
+      font-size: 18px;
+    }
+
+    &.-staff-pick {
+      background-color: $yellow;
+    }
+  }
+
+  .__title {
+    color: inherit;
+    font-size: $font-medium;
+    line-height: 1.2;
+    margin: 0 0 4px;
+  }
+
+  .__tagline {
+    color: inherit;
+    font-size: 0.9em;
+    line-height: 1;
+    margin: 0;
+
+    @include visually-hidden();
+
+    @include media($tablet) {
+      @include visually-restored();
+    }
+
+  }
+
+  .__title,
+  .__tagline {
+    text-shadow: $text-shadow;
+  }
+
+
+  &.-unpublished {
+    opacity: 0.45;
+  }
+}
+

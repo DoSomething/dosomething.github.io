@@ -1,0 +1,34 @@
+// The Call To Action module is used to show show a short
+// "call to action" message with an accompanying button.
+// CTA's typically span the full width of the page.
+//
+// Styleguide Call To Action
+
+.cta {
+  background-color: lighten($light-gray, 10%);
+  border-bottom: 2px solid $light-gray;
+  border-top: 2px solid $light-gray;
+  padding: 18px;
+  @include row;
+  @include media($tablet) {
+    padding: 0;
+  }
+
+  > .wrapper {
+    text-align: center;
+    padding: 36px 0;
+
+
+    @include media($tablet) {
+      @include span-columns(12);
+      @include shift(2);
+    }
+  }
+
+  .__message {
+    color: $copy-color;
+    font-size: $font-medium;
+    font-weight: $weight-sbold;
+    margin: 0 0 9px;
+  }
+}
