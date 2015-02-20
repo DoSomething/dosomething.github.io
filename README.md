@@ -1,2 +1,1 @@
-dosomething.github.io
-=====================
+# DoSomething.org Tech Blog
