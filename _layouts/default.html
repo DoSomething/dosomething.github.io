@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  {% include meta.html %}
+
+  <link rel="stylesheet" href="ds-neue/neue.css" media="screen, projection" type="text/css">
+</head>
+
+<body>
+<div class="chrome">
+  <nav class="navigation -white -floating">
+    <a class="navigation__logo" href="http://tech.dosomething.org"><span>DoSomething.org</span></a>
+    <div class="navigation__menu">
+      <ul class="navigation__primary">
+        <li>
+          <a href="/">
+            <strong class="navigation__title">Tech For Good</strong>
+            <span class="navigation__subtitle">The DoSomething.org Tech Blog</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header role="banner" class="header">
+    <div class="wrapper">
+      <h1 class="header__title">Title</h1>
+      <p class="header__subtitle">Subtitle.</p>
+    </div>
+  </header>
+
+  <main role="main">
+    <section class="container">
+      <div class="wrapper">
+        <div class="container__block">
+        {{ content }}
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <section class="container">
+      <div class="wrapper">
+        <a href="http://www.dosomething.org"><p>To the DoSomething.org website ></p></a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+{% include analytics.html %}
+
+</body>
+</html>

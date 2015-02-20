@@ -1,81 +1,28 @@
-<!DOCTYPE html>
+---
+layout: default
+---
 
-<html class="no-js">
-<head>
-  <meta charset="utf-8">
-  <title>Open Source Projects at DoSomething.org</title>
+<div class="posts">
+  {% for post in site.posts %}
+  {% unless post.draft %}
+  {% unless post.redirect %}
+  <article class="post">
+    <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <link rel="shortcut icon" href="ds-neue/dist/assets/favicon.ico">
-  <link rel="apple-touch-icon-precomposed" href="ds-neue/dist/assets/apple-touch-icon-precomposed.png">
+    <div class="date">
+      {{ post.date | date: "%B %e, %Y" }}
+    </div>
 
-  <link rel="stylesheet" href="ds-neue/dist/neue.css" media="screen, projection" type="text/css">
-</head>
+    <div class="entry">
+      {% if post.thumbnail %}
+      <img src="{{ post.thumbnail }}" >
+      {% endif %}
+      {{ post.content | split:"<!--more-->" | first }}
+    </div>
 
-<body>
-
-<div class="chrome">
-  <div id="top" class="chrome--wrapper">
-    <nav class="chrome--nav white floating">
-      <a class="logo" href="http://www.dosomething.org"><img src="ds-neue/dist/assets/images/ds-logo.png" alt="DoSomething.org"></a>
-    </nav>
-
-    <header role="banner" class="-basic -styleguide">
-      <div class="wrapper">
-        <h1 class="__title">Open Sourcery</h1>
-      </div>
-    </header>
-
-    <main>
-      <div class="container">
-        <div class="wrapper">
-          <h3>All of our GitHub repositories are public at DoSomething.org. Below is a showcase of a select few, all built on top of open source software.</h3>
-          
-          <ul class="gallery -triad" style="margin: 50px auto; padding: 20px; border: 2px solid #ddd;">
-            <li>
-            <div class="tile tile--figure">
-              <h3><a href="https://github.com/DoSomething/dosomething">dosomething</a></h3>
-              <div class="__description">
-                A Drupal 7 distribution that powers the <a href="http://www.dosomething.org">DoSomething.org</a> web platform.
-              </div>
-            </div>
-            </li>
-
-            <li>
-            <div class="tile tile--figure">
-              <h3><a href="https://github.com/DoSomething/neue">neue</a></h3>
-              <div class="__description">
-                Pattern library and base styles for DoSomething.org's web interfaces.
-              </div>
-            </div>
-            </li>
-
-            <li>
-            <div class="tile tile--figure">
-              <h3><a href="https://github.com/DoSomething/ds-homestead">ds-homestead</a></h3>
-              <div class="__description">
-                Laravel Homestead local development environment tweaked for DoSomething developers.
-              </div>
-            </div>
-            </li>
-
-            <li>
-            <div class="tile tile--figure">
-              <h3><a href="https://github.com/DoSomething/voting-app">voting-app</a></h3>
-              <div class="__description">
-                A voting application written in Laravel that currently runs <a href="www.celebsgonegood.com">Celebs Gone Good</a>.
-              </div>
-            </div>
-            </li>
-          </ul>
-
-          <p>All repositories are released under the <a href="https://github.com/DoSomething/dosomething.github.io/blob/master/LICENSE">MIT License</a>.</p>
-        </div>
-      </div>
-    </main>
-  </div>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+  </article>
+  {% endunless %}
+  {% endunless %}
+  {% endfor %}
 </div>
-
-</body>
-</html>
