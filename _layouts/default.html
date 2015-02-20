@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  {% include meta.html %}
+
+  <link rel="stylesheet" href="ds-neue/dist/neue.css" media="screen, projection" type="text/css">
+</head>
+
+<body>
+<div class="chrome">
+  <div id="top" class="chrome--wrapper">
+    <nav class="chrome--nav white floating">
+      <a class="logo" href="http://tech.dosomething.org"><img src="{{ site.avatar }}" alt="DoSomething.org"></a>
+    </nav>
+
+    <header role="banner" class="-basic -styleguide">
+      <div class="wrapper">
+        <h1 class="__title">Tech For Good</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+{% include analytics.html %}
+
+</body>
+</html>
