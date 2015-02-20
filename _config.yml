@@ -4,9 +4,9 @@
 
 # Sitewide variables - primarily used in the header
 
-site-name: Tech For Good
-site-description: DoSomething.org Engineering Blog
-site-avatar: /ds-neue/assets/images/logo.svg
+name: Tech For Good
+description: DoSomething.org Engineering Blog
+avatar: /ds-neue/assets/images/logo.svg
 
 # Google Analytics tracking code
 google_analytics:
