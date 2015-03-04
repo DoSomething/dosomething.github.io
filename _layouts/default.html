@@ -2,52 +2,62 @@
 <html class="no-js">
 
 <head>
-  {% include meta.html %}
+    {% include meta.html %}
 
-  <link rel="stylesheet" href="ds-neue/neue.css" media="screen, projection" type="text/css">
+    <link rel="stylesheet" href="/ds-neue/neue.css" media="screen, projection" type="text/css">
+    <link rel="stylesheet" href="/blog.css" media="screen, projection" type="text/css">
+    <script type="text/javascript" src="/ds-neue/modernizr.js"></script>
 </head>
 
 <body>
 <div class="chrome">
-  <nav class="navigation -white -floating">
-    <a class="navigation__logo" href="http://tech.dosomething.org"><span>DoSomething.org</span></a>
-    <div class="navigation__menu">
-      <ul class="navigation__primary">
-        <li>
-          <a href="/">
-            <strong class="navigation__title">Tech For Good</strong>
-            <span class="navigation__subtitle">The DoSomething.org Tech Blog</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <header role="banner" class="header">
     <div class="wrapper">
-      <h1 class="header__title">Title</h1>
-      <p class="header__subtitle">Subtitle.</p>
-    </div>
-  </header>
+        <nav class="navigation">
+            <a class="navigation__logo" href="/"><span>DoSomething.org</span></a>
+            <p class="navigation__intro">
+                You're reading <a href="/" class="navigation__intro-primary">Tech For Good</a>, the <a href="https://www.dosomething.org">DoSomething.org</a> tech blog.
+            </p>
+        </nav>
 
-  <main role="main">
-    <section class="container">
-      <div class="wrapper">
-        <div class="container__block">
-        {{ content }}
-        </div>
-      </div>
-    </div>
-  </main>
+        <main role="main" class="container -padded">
+            <div class="wrapper">
+                {{ content }}
+            </div>
+        </main>
 
-  <footer class="footer">
-    <section class="container">
-      <div class="wrapper">
-        <a href="http://www.dosomething.org"><p>To the DoSomething.org website ></p></a>
-      </div>
+        <footer class="container -padded blog-footer">
+            <div class="wrapper">
+                <div class="container__block -half">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        {% for post in site.posts %}
+                        {% unless post.draft %}
+                        {% unless post.redirect %}
+                        <li><a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.title }}</span></a></li>
+                        {% endunless %}
+                        {% endunless %}
+                        {% endfor %}
+                    </ul>
+
+                </div>
+
+                <div class="container__block -half">
+                    <h3>Job Openings</h3>
+                    <ul>
+                        <li><a href="#">Back-End Tech Lead</a></li>
+                        <li><a href="#">Junior Software Engineer</a></li>
+                    </ul>
+                </div>
+
+                <div class="container__block -narrow">
+                    <div class="footnote">&copy; 2015 DoSomething.org.</div>
+                </div>
+            </div>
+
+        </footer>
     </div>
-  </footer>
 </div>
+
 
 {% include analytics.html %}
 
