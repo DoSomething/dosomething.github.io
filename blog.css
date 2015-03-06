@@ -1,0 +1,59 @@
+/**
+ * Overrides and custom styles for the tech blog.
+ * Built for Neue 6.0.
+ */
+
+body {
+    background: #fff;
+}
+
+.chrome > .wrapper {
+    box-shadow: none;
+}
+
+.navigation__intro {
+    float: left;
+    padding: 12px;
+    font-weight: 400;
+}
+
+.navigation__intro, .navigation__intro a {
+    color: #999;
+    font-weight: 400;
+}
+
+.navigation__intro .navigation__intro-primary {
+    color: #000;
+    font-weight: 700;
+}
+
+.post-link-heading {
+    margin-bottom: 0;
+}
+
+.post-link-heading a {
+    color: #4e2b63;
+}
+
+.post-link-heading a:after {
+    content: ' →';
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.post-link-heading a:hover {
+    text-decoration: none;
+}
+
+.post .footnote {
+    margin-bottom: 24px;
+}
+
+.post-link-heading a:hover span {
+    text-decoration: underline;
+}
+
+.post-date {
+    margin-bottom: 12px;
+}
