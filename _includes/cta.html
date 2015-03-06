@@ -1,11 +1,17 @@
 <div class="container__block -narrow">
     <div class="cta">
         <div class="wrapper">
-            <div class="form-item">
-                <input type="text" class="text-field email" placeholder="Your Email">
-            </div>
-            <a href="#" class="button">Get our latest posts</a>
-            <p class="footnote">Only nerdiest stuff. We'll never spam you.</p>
+            <form class="email-signup" action="http://twitter.us2.list-manage.com/subscribe/post?u={{ site.mailchimp.user-id }}&amp;id={{ site.mailchimp.list-id }}" method="post" novalidate>
+                <div class="form-item">
+                    <input type="email" class="text-field email" placeholder="Your Email"value="" name="EMAIL">
+                </div>
+
+                <!-- bot signup protection - real people won't fill this in -->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_{{ site.mailchimp.user-id }}_{{ site.mailchimp.list-id }}" tabindex="-1" value=""></div>
+
+                <input type="submit" value="Get our latest posts" name="subscribe" class="button">
+                <p class="footnote">Only nerdiest stuff. We'll never spam you.</p>
+            </form>
         </div>
     </div>
 </div>
