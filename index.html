@@ -21,10 +21,10 @@ layout: default
             {{ post.content | split:"<!--more-->" | first }}
             <a href="{{ site.baseurl }}{{ post.url }}" class="secondary">Read More&hellip;</a>
         </div>
-
     </article>
     {% endunless %}
     {% endunless %}
     {% endfor %}
-</div>
 
+    {% include cta.html %}
+</div>
