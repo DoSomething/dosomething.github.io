@@ -11,6 +11,11 @@ avatar: /ds-neue/assets/images/logo.svg
 # Google Analytics tracking code
 google_analytics:
 
+# Mailchimp info
+mailchimp:
+  user-id: 47b90314b0f78c04132888344
+  list-id: ca3e8b54e2
+
 # Used for Sitemap.xml, RSS and metadata
 url: http://tech.dosomething.org
 
