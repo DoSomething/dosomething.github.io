@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Post Example Template"
 description: ""
 thumbnail:
 
@@ -9,4 +9,4 @@ layout: post
 author: barry
 ---
 
-Hi!
+Hi! I'm an example post :)

@@ -22,7 +22,7 @@ layout: default
             <img src="{{ post.thumbnail }}" >
             {% endif %}
             {{ post.content | split:"<!--more-->" | first }}
-            <a href="{{ site.baseurl }}{{ post.url }}" class="secondary">Read More&hellip;</a>
+            <p class="footnote"><a href="{{ site.baseurl }}{{ post.url }}" class="secondary">Read More&hellip;</a></p>
         </div>
     </article>
     {% endunless %}
