@@ -10,9 +10,12 @@ layout: default
     <article class="container__block -narrow">
         <h1 class="post-link-heading"><a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.title }}</span></a></h1>
 
+        {% assign author = site.authors[post.author] %}
+        {% if author.name %}
         <div class="footnote post-date">
-            {{ post.date | date: "%B %e, %Y" }}
+            {{ post.date | date: "%B %e, %Y" }} by {{ author.name }}
         </div>
+        {% endif %}
 
         <div class="entry">
             {% if post.thumbnail %}
