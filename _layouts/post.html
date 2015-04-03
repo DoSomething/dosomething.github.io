@@ -9,7 +9,8 @@ layout: default
         <h1 class="heading -hero">{{ page.title }}</h1>
 
         <div class="footnote post-date">
-            {{ page.date | date: "%B %e, %Y" }} by {{ author.name }}
+            {{ page.date | date: "%B %e, %Y" }}
+            {% if author.name %} by {{ author.name }}{% endif %}
         </div>
 
         <div class="entry">
