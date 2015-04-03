@@ -4,12 +4,13 @@ layout: default
 
 {% assign author = site.authors[page.author] %}
 
-<div class="container__block">
+<div class="container__block -narrow with-lists">
     <article class="post">
         <h1 class="heading -hero">{{ page.title }}</h1>
 
         <div class="footnote post-date">
-            {{ page.date | date: "%B %e, %Y" }} by {{ author.name }}
+            {{ page.date | date: "%B %e, %Y" }}
+            {% if author.name %} by {{ author.name }}{% endif %}
         </div>
 
         <div class="entry">
@@ -26,7 +27,7 @@ layout: default
               <img alt="{{ author.name }} avatar" src="https://avatars.githubusercontent.com/{{ author.github }}">
             </div>
             <div class="figure__body">
-                <h3>About {{ author.name }}</h3>
+                <h3>About the author: {{ author.name }}</h3>
                 <p>{{ author.blurb }}</p>
                 <p>You can follow him on: <a href="http://github.com/{{ author.github }}">GitHub</a>, <a href="http://twitter.com/{{ author.twitter }}">Twitter</a><p>
             </div>

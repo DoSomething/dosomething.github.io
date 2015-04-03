@@ -2,8 +2,12 @@
 layout: default
 ---
 
-<article class="page">
-  <div class="entry">
-    {{ content }}
-  </div>
-</article>
+<div class="container__block -narrow with-lists">
+    <article class="page">
+        <div class="entry">
+            {{ content }}
+        </div>
+
+        {% include cta.html %}
+    </article>
+</div>

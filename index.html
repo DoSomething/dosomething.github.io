@@ -11,18 +11,17 @@ layout: default
         <h1 class="post-link-heading"><a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.title }}</span></a></h1>
 
         {% assign author = site.authors[post.author] %}
-        {% if author.name %}
         <div class="footnote post-date">
-            {{ post.date | date: "%B %e, %Y" }} by {{ author.name }}
+            {{ post.date | date: "%B %e, %Y" }}
+            {% if author.name %} by {{ author.name }}{% endif %}
         </div>
-        {% endif %}
 
         <div class="entry">
             {% if post.thumbnail %}
             <img src="{{ post.thumbnail }}" >
             {% endif %}
             {{ post.content | split:"<!--more-->" | first }}
-            <a href="{{ site.baseurl }}{{ post.url }}" class="secondary">Read More&hellip;</a>
+            <p class="footnote"><a href="{{ site.baseurl }}{{ post.url }}" class="secondary">Read More&hellip;</a></p>
         </div>
     </article>
     {% endunless %}

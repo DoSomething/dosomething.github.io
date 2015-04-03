@@ -49,10 +49,6 @@ body {
     text-decoration: none;
 }
 
-.post .footnote {
-    margin-bottom: 24px;
-}
-
 .post .author {
     margin: 24px 0;
 }
@@ -67,6 +63,10 @@ body {
 
 .cta {
     border: 2px solid rgb(221, 221, 221);
+}
+
+.cta .footnote {
+    margin-top: 12px;
 }
 
 input.email {
