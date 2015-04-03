@@ -1,12 +1,26 @@
-#
-# This file contains configuration flags to customize your site
-#
-
-# Sitewide variables - primarily used in the header
+###
+### Sitewide variables - primarily used in the header
+###
 
 name: Tech For Good
 description: DoSomething.org Engineering Blog
 avatar: /ds-neue/assets/images/logo.svg
+url: http://tech.dosomething.org # Used for Sitemap.xml, RSS and metadata
+
+###
+### Authors - author information is pulled in at the top of each post
+###
+
+authors:
+  barry:
+    name: Barry Clark
+    github: barryclark
+    twitter: baznyc
+    blurb: "Barry is the Director of Technical Product at DoSomething, and is fascinated with building a great engineering team & culture."
+
+###
+### Tracking Codes
+###
 
 # Google Analytics tracking code
 google_analytics:
@@ -16,8 +30,9 @@ mailchimp:
   user-id: 47b90314b0f78c04132888344
   list-id: ca3e8b54e2
 
-# Used for Sitemap.xml, RSS and metadata
-url: http://tech.dosomething.org
+###
+### Jekyll Configuration
+###
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
