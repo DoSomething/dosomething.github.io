@@ -8,6 +8,17 @@ avatar: /ds-neue/assets/images/logo.svg
 url: http://tech.dosomething.org # Used for Sitemap.xml, RSS and metadata
 
 ###
+### Authors - author information is pulled in at the top of each post
+###
+
+authors:
+	barry:
+		name: Barry Clark
+		github: barryclark
+		twitter: baznyc
+		blurb: "Barry is the Director of Technical Product at DoSomething, and is fascinated with building a great engineering team & culture."
+
+###
 ### Tracking Codes
 ###
 
