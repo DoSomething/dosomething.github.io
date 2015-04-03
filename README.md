@@ -33,9 +33,11 @@ You don't need to set up a local development environment to write a blog post, b
 1. Create a pull request to get feedback and track the progress of your post.
 1. When your first draft is done, assign it to [Barry](https://github.com/barryclark/) and @mention [Matt](http://www.github.com/mshmsh5000) for review.
 
-### Updating author information
+### Adding your author info
 
-Tbc
+1. Hop into [_config.yml](https://github.com/DoSomething/dosomething.github.io/blob/master/_config.yml)
+1. You'll find author information near the top. Copy/paste mine and add your own info in.
+1. When writing a post, add `author: yourname` to the front-matter at the top to pull in your author information and GitHub avatar.
 
 ### Contributing to the theme
 
