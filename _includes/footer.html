@@ -1,0 +1,29 @@
+<footer class="container -padded blog-footer">
+    <div class="wrapper">
+        <div class="container__block -half">
+            <h4>Catch up with our latest posts&hellip;</h4>
+            <ul>
+                {% for post in site.posts limit: 5 %}
+                {% unless post.draft %}
+                {% unless post.redirect %}
+                <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                {% endunless %}
+                {% endunless %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="container__block -half">
+            <h4>Awesome things&trade;</h4>
+            <ul>
+                <li><a href="https://www.dosomething.org/about/who-we-are">What is DoSomething.org?</a></li>
+                <li><a href="https://www.dosomething.org/about/were-hiring">We're hiring!</a></li>
+                <li><a href="https://www.dosomething.org/about/donate-pretty-please">Donate</a></li>
+            </ul>
+        </div>
+
+        <div class="container__block -narrow">
+            <div class="footnote">&copy; 2015 DoSomething.org</div>
+        </div>
+    </div>
+</footer>

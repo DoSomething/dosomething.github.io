@@ -2,15 +2,24 @@
     <div class="cta">
         <div class="wrapper">
             <form class="email-signup" action="//dosomething.us4.list-manage.com/subscribe/post?u={{ site.mailchimp.user-id }}&amp;id={{ site.mailchimp.list-id }}" method="post" novalidate>
+
                 <div class="form-item">
-                    <input type="email" class="text-field email" placeholder="Your Email"value="" name="EMAIL">
+                    <label class="field-label">Email Address</label>
+                    <input type="email" class="text-field email" placeholder="you@example.com" value="" name="EMAIL">
                 </div>
 
                 <!-- bot signup protection - real people won't fill this in -->
                 <div style="position: absolute; left: -5000px;"><input type="text" name="b_{{ site.mailchimp.user-id }}_{{ site.mailchimp.list-id }}" tabindex="-1" value=""></div>
 
-                <div class="form-actions"><input type="submit" value="Get our latest posts" name="subscribe" class="button"></div>
-                <p class="footnote">Only nerdy stuff. We'll never spam you.</p>
+                <div class="form-actions">
+                    <input type="submit" value="Get our latest posts" name="subscribe" class="button">
+
+                    <div class="message-callout -below message-callout--spam">
+                        <div class="message-callout__copy">
+                            <p>No spam. Period.</p>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

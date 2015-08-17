@@ -4,60 +4,37 @@
 <head>
     {% include meta.html %}
 
-    <link rel="stylesheet" href="/ds-neue/neue.css" media="screen, projection" type="text/css">
-    <link rel="stylesheet" href="/blog.css" media="screen, projection" type="text/css">
-    <script type="text/javascript" src="/ds-neue/modernizr.js"></script>
+    <script type="text/javascript" src="http://forge.dosomething.org/dist/modernizr.js"></script>
+
+    <link rel="stylesheet" href="http://forge.dosomething.org/dist/forge.css" media="screen, projection" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/blog.css" media="screen, projection" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/github.css" media="screen, projection" type="text/css">
 </head>
 
 <body>
 <div class="chrome">
     <div class="wrapper">
-        <nav class="navigation">
-            <a class="navigation__logo" href="/"><span>DoSomething.org</span></a>
-            <p class="navigation__intro">
-                You're reading <a href="/" class="navigation__intro-primary">Tech For Good</a>, the <a href="https://www.dosomething.org">DoSomething.org</a> tech blog.
-            </p>
+        <nav class="navigation -white -floating">
+            <a class="navigation__logo" href="{{ site.baseurl }}"><span>DoSomething.org</span></a>
+            <div class="navigation__menu">
+                <ul class="navigation__secondary">
+                    <li>
+                        <form action="https://www.google.com/search" method="get">
+                            <input type="hidden" name="sitesearch" value="blog.dosomething.org">
+                            <input type="search" name="q" class="text-field -search">
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
-        <main role="main" class="container">
-            <div class="wrapper">
-                {{ content }}
-            </div>
-        </main>
+        {{ content }}
 
-        <footer class="container -padded blog-footer">
-            <div class="wrapper">
-                <div class="container__block -half">
-                    <h3>Recent Posts</h3>
-                    <ul>
-                        {% for post in site.posts %}
-                        {% unless post.draft %}
-                        {% unless post.redirect %}
-                        <li><a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.title }}</span></a></li>
-                        {% endunless %}
-                        {% endunless %}
-                        {% endfor %}
-                    </ul>
+        {% include cta.html %}
+        {% include footer.html %}
 
-                </div>
-
-                <div class="container__block -half">
-                    <h3>Job Openings</h3>
-                    <ul>
-                        <li><a href="#">Back-End Tech Lead</a></li>
-                        <li><a href="#">Junior Software Engineer</a></li>
-                    </ul>
-                </div>
-
-                <div class="container__block -narrow">
-                    <div class="footnote">&copy; 2015 DoSomething.org.</div>
-                </div>
-            </div>
-
-        </footer>
     </div>
 </div>
-
 
 {% include analytics.html %}
 

@@ -2,31 +2,53 @@
 layout: default
 ---
 
-<div class="posts">
+<header class="header header--blog header--blog-home with-gradient">
+    <div class="wrapper">
+        <h1 class="header__title">{{ site.name }}</h1>
+        <p class="header__subtitle">{{ site.description }}</p>
+    </div>
+</header>
 
-    {% for post in site.posts %}
-    {% unless post.draft %}
-    {% unless post.redirect %}
-    <article class="container__block -narrow">
-        <h1 class="post-link-heading"><a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.title }}</span></a></h1>
+<main role="main" class="container">
+    <div class="wrapper">
+        <div class="posts">
+            {% for post in paginator.posts %}
+            {% unless post.draft %}
+            {% unless post.redirect %}
+            <article class="container__block -narrow">
+                <h1 class="post-link-heading"><a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.title }}</span></a></h1>
 
-        {% assign author = site.authors[post.author] %}
-        <div class="footnote post-date">
-            {{ post.date | date: "%B %e, %Y" }}
-            {% if author.name %} by {{ author.name }}{% endif %}
-        </div>
+                {% assign author = site.authors[post.author] %}
+                <div class="footnote post-date">
+                    {{ post.date | date: "%B %e, %Y" }}
+                    {% if author.name %} by {{ author.name }}{% endif %}
+                </div>
 
-        <div class="entry">
-            {% if post.thumbnail %}
-            <img src="{{ post.thumbnail }}" >
-            {% endif %}
-            {{ post.content | split:"<!--more-->" | first }}
-            <p class="footnote"><a href="{{ site.baseurl }}{{ post.url }}" class="secondary">Read More&hellip;</a></p>
-        </div>
-    </article>
-    {% endunless %}
-    {% endunless %}
-    {% endfor %}
+                {% if post.thumbnail %}
+                <div class="figure -left -medium">
+                    <div class="figure__media">
+                        <img src="{{ site.baseurl }}/thumbnails/{{ post.thumbnail }}" >
+                    </div>
+                    <div class="figure__body">
+                        {{ post.content | split:"<!--more-->" | first }}
+                        <p class="footnote"><a href="{{ site.baseurl }}{{ post.url }}" class="secondary">Read More&hellip;</a></p>
+                    </div>
+                </div>
+                {% else %}
+                <div class="entry">
+                    {{ post.content | split:"<!--more-->" | first }}
+                    <p class="footnote"><a href="{{ site.baseurl }}{{ post.url }}" class="secondary">Read More&hellip;</a></p>
+                </div>
+                {% endif %}
+            </article>
+            {% endunless %}
+            {% endunless %}
+            {% endfor %}
+    </div>
+</main>
 
-    {% include cta.html %}
-</div>
+<nav class="container -padded">
+    <div class="wrapper">
+        {% include pagination.html %}
+    </div>
+</nav>

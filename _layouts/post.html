@@ -1,39 +1,52 @@
 ---
-layout: default
+layout: content
 ---
 
 {% assign author = site.authors[page.author] %}
 
-<div class="container__block -narrow with-lists">
-    <article class="post">
-        <h1 class="heading -hero">{{ page.title }}</h1>
-
-        <div class="footnote post-date">
-            {{ page.date | date: "%B %e, %Y" }}
-            {% if author.name %} by {{ author.name }}{% endif %}
-        </div>
-
-        <div class="entry">
-            {% if page.thumbnail %}
-            <img class="alignright" src="{{ page.thumbnail }}" >
-            {% endif %}
-
-            {{ content }}
-        </div>
-
-        {% if author.github %}
-        <div class="author figure -medium -left">
-            <div class="figure__media">
-              <img alt="{{ author.name }} avatar" src="https://avatars.githubusercontent.com/{{ author.github }}">
-            </div>
-            <div class="figure__body">
-                <h3>About the author: {{ author.name }}</h3>
-                <p>{{ author.blurb }}</p>
-                <p>You can follow him on: <a href="http://github.com/{{ author.github }}">GitHub</a>, <a href="http://twitter.com/{{ author.twitter }}">Twitter</a><p>
-            </div>
-        </div>
+<header {% if page.background %} class="header header--blog with-gradient" style="background-image: url('{{ site.baseurl }}/backgrounds/{{ page.background }}');" {% else %} class="header header--blog" {% endif %}>
+    <div class="wrapper">
+        <h1 class="header__title">{{ page.title }}</h1>
+        {% if author.name %}
+            <p class="header__subtitle">by {{ author.name }}</p>
         {% endif %}
+    </div>
+</header>
 
-        {% include cta.html %}
-    </article>
-</div>
+<main role="main" class="container -padded">
+    <div class="wrapper">
+
+        <div class="container__block -narrow with-lists">
+            <article class="post">
+                <h1 class="heading -hero"></h1>
+
+                <div class="footnote post-date">
+                    {{ page.date | date: "%B %e, %Y" }}
+                </div>
+
+                <div class="entry">
+                    {{ content }}
+                </div>
+            </article>
+        </div>
+
+        <div class="container__block -narrow">
+            {% if author.github %}
+            <div class="author figure -left">
+                <div class="figure__media">
+                    <div class="avatar">
+                        <img alt="{{ author.name }} avatar" src="https://avatars.githubusercontent.com/{{ author.github }}">
+                    </div>
+                </div>
+                <div class="figure__body">
+                    <h3>By {{ author.name }}</h3>
+                    <p>{{ author.blurb }}</p>
+                    <ul class="social-icons">
+                        {% if author.twitter %}<li><a href="http://twitter.com/{{ author.twitter }}" class="social-icon -twitter"><span>Twitter</span> {{ author.twitter }}</a></li>{% endif %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</main>
