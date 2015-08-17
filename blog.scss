@@ -74,9 +74,8 @@
 
   > .wrapper {
     position: absolute;
-    top: 50%;
+    bottom: 24px;
     padding: 18px;
-    transform: translateY(-50%);
   }
 
   .header__title {
@@ -152,7 +151,6 @@
 
 // Figure for right-aligned "pull images" in blog posts.
 .figure.figure--aside {
-
   @media (min-width: 760px) {
     float: right;
     max-width: 500px;
@@ -165,6 +163,12 @@
 // Post date line
 .post-date {
   margin-bottom: 12px;
+}
+
+.post {
+  img {
+    margin: 12px auto;
+  }
 }
 
 // Simple pagination
