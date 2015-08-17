@@ -6,7 +6,15 @@
                 {% for post in site.posts limit: 5 %}
                 {% unless post.draft %}
                 {% unless post.redirect %}
-                <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                <li>
+                    <a href="{{ site.baseurl }}{{ post.url }}">
+                        <span>{{ post.title }}</span>
+                    {% if post.author %}
+                        {% assign author = site.authors[post.author] %}
+                        <em class="footnote">by {{ author.name }}</em>
+                    {% endif %}
+                    </a>
+                </li>
                 {% endunless %}
                 {% endunless %}
                 {% endfor %}
@@ -16,9 +24,24 @@
         <div class="container__block -half">
             <h4>Awesome things&trade;</h4>
             <ul>
-                <li><a href="https://www.dosomething.org/about/who-we-are">What is DoSomething.org?</a></li>
-                <li><a href="https://www.dosomething.org/about/were-hiring">We're hiring!</a></li>
-                <li><a href="https://www.dosomething.org/about/donate-pretty-please">Donate</a></li>
+                <li>
+                    <a href="https://www.dosomething.org/about/who-we-are">
+                        <span>What is DoSomething.org?</span><br/>
+                        <em class="footnote">who we are & what we do</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.dosomething.org/about/were-hiring">
+                        <span>We're hiring!</span><br/>
+                        <em class="footnote">work with us</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.dosomething.org/about/donate-pretty-please">
+                        <span>Donate</span><br/>
+                        <em class="footnote">help us make an impact</em>
+                    </a>
+                </li>
             </ul>
         </div>
 

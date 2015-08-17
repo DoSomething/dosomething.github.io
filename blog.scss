@@ -212,7 +212,34 @@
 // Custom footer for the blog.
 .blog-footer {
   padding-top: 48px;
+
+  li {
+    margin-bottom: 12px;
+
+    .footnote {
+      font-weight: 500;
+      margin-top: 0;
+    }
+  }
+
+  em {
+    font-style: normal;
+  }
+
+  a {
+    display: inline-block;
+    line-height: 1.2;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+
+    &:hover span {
+      text-decoration: underline;
+    }
+  }
 }
+
 // Code samples
 .highlight {
   background: #eeeeee;
