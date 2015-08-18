@@ -106,6 +106,29 @@
   }
 }
 
+// Category navigation container
+.blog-navigation {
+  padding: 12px 0;
+
+  .waypoints.-primary {
+    background: #fff;
+    padding: 12px 0;
+
+    li.is-active {
+      border-bottom: 2px solid #23b7fb;
+
+    }
+  }
+
+  @media (min-width: 760px) {
+    > .wrapper {
+      width: 75%;
+      margin-left: 12.5%;
+    }
+  }
+
+}
+
 // Social icons pattern.
 // @TODO: Does this belong in Neue?
 .social-icons {
