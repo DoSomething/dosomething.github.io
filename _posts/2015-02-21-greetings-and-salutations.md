@@ -2,6 +2,8 @@
 layout: post
 title: Greetings & Salutations 
 author: dave
+tags:
+ - our-blog
 
 background: placeholder.jpg
 thumbnail: placeholder.jpg

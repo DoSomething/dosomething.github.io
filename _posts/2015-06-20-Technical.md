@@ -2,6 +2,8 @@
 layout: post
 title: Let's get technical!
 author: dave
+tags: 
+ - tech
 
 background: blueprint-neue.png
 

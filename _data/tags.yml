@@ -1,0 +1,15 @@
+- slug: our-blog
+  name: Our Blog
+  description: The highlights.
+
+- slug: press
+  name: Press
+  description: We're cool.
+
+- slug: tech
+  name: Tech
+  description: On the information superhighway.
+
+- slug: member-wins
+  name: Member Wins
+  description: Our members are awesome.

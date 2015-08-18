@@ -2,6 +2,9 @@
 layout: post
 title: How Shawn Mendes Is Spreading Happiness With Little Notes
 author: ben
+tags:
+ - our-blog
+ - press
 
 background: shawn-mendes.jpg
 thumbnail: shawn-mendes.jpg
