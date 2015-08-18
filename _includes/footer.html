@@ -1,8 +1,8 @@
-<footer class="container -padded blog-footer post-link-list">
+<footer class="container -padded blog-footer">
     <div class="wrapper">
         <div class="container__block -half">
             <h4>Catch up with our latest posts&hellip;</h4>
-            <ul>
+            <ul class="post-link-list">
                 {% for post in site.posts limit: 5 %}
                 {% unless post.draft %}
                 {% unless post.redirect %}
@@ -23,7 +23,7 @@
 
         <div class="container__block -half">
             <h4>Awesome things&trade;</h4>
-            <ul>
+            <ul class="post-link-list">
                 <li>
                     <a href="https://www.dosomething.org/about/who-we-are">
                         <span>What is DoSomething.org?</span><br/>

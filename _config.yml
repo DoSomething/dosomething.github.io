@@ -5,7 +5,7 @@
 name: Tech For Good
 description: The DoSomething.org tech blog
 url: http://tech.dosomething.org # Used for Sitemap.xml, RSS and metadata
-paginate: 5
+paginate: 10
 
 ###
 ### Authors - author information is pulled in at the top of each post

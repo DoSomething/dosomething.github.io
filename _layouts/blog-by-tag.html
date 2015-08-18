@@ -22,43 +22,41 @@ layout: content
 <main role="main" class="container -padded">
     <div class="wrapper">
         <div class="container__block -narrow">
-            <div id="post-content">
-                {% if site.tags[page.tag] %}
-                {% for post in site.tags[page.tag] %}
-                {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
-                {% if forloop.first %}
-                <h3>{{ post_year }}</h3>
-                <ul class="post-link-list">
-                    {% endif %}
-
-                    {% if forloop.first == false %}
-                    {% assign previous_index = forloop.index0 | minus: 1 %}
-                    {% capture previous_post_year %}{{ site.tags[page.tag][previous_index].date | date: '%Y' }}{% endcapture %}
-                    {% if post_year != previous_post_year %}
-                </ul>
-                <h3>{{ post_year }}</h3>
-                <ul class="post-link-list">
-                    {% endif %}
-                    {% endif %}
-
-                    <li>
-                        <a href="{{ site.baseurl }}{{ post.url }}">
-                            <span>{{ post.title }}</span>
-                            {% if post.author %}
-                            {% assign author = site.authors[post.author] %}
-                            <em class="footnote">by {{ author.name }}</em>
-                            {% endif %}
-                        </a>
-                    </li>
-
-                    {% if forloop.last %}
-                </ul>
+            {% if site.tags[page.tag] %}
+            {% for post in site.tags[page.tag] %}
+            {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+            {% if forloop.first %}
+            <h3>{{ post_year }}</h3>
+            <ul class="post-link-list">
                 {% endif %}
-                {% endfor %}
-                {% else %}
-                <p>There are no posts for this tag.</p>
+
+                {% if forloop.first == false %}
+                {% assign previous_index = forloop.index0 | minus: 1 %}
+                {% capture previous_post_year %}{{ site.tags[page.tag][previous_index].date | date: '%Y' }}{% endcapture %}
+                {% if post_year != previous_post_year %}
+            </ul>
+            <h3>{{ post_year }}</h3>
+            <ul class="post-link-list">
                 {% endif %}
-            </div>
+                {% endif %}
+
+                <li>
+                    <a href="{{ site.baseurl }}{{ post.url }}">
+                        <span>{{ post.title }}</span>
+                        {% if post.author %}
+                        {% assign author = site.authors[post.author] %}
+                        <em class="footnote">by {{ author.name }}</em>
+                        {% endif %}
+                    </a>
+                </li>
+
+                {% if forloop.last %}
+            </ul>
+            {% endif %}
+            {% endfor %}
+            {% else %}
+            <p>There are no posts for this tag.</p>
+            {% endif %}
         </div>
     </div>
 </main>
