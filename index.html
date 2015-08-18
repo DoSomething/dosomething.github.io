@@ -1,5 +1,6 @@
 ---
 layout: default
+tag: our-blog
 ---
 
 <header class="header header--blog header--blog-home with-gradient">
@@ -17,6 +18,15 @@ layout: default
             {% for post in paginator.posts %}
             {% unless post.draft %}
             {% unless post.redirect %}
+
+            {% assign on_homepage = false %}
+            {% for tag in post.tags %}
+                {% if tag == page.tag %}
+                    {% assign on_homepage = true %}
+                {% endif %}
+            {% endfor %}
+
+            {% if on_homepage %}
             <article class="container__block -narrow">
                 <h1 class="post-link-heading"><a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.title }}</span></a></h1>
 
@@ -55,6 +65,7 @@ layout: default
                 </div>
                 {% endif %}
             </article>
+            {% endif %}
             {% endunless %}
             {% endunless %}
             {% endfor %}
