@@ -1,0 +1,76 @@
+.header.header--engineering {
+    min-height: 150px !important;
+    height: 150px !important;
+    padding: 125px 0 100px;
+    background: #000;
+}
+
+.header--engineering__terminal {
+    position: absolute;
+    top: 0;
+    width: auto;
+    padding-top: 12px;
+    text-align: center;
+}
+
+.header--engineering__terminal pre {
+    font-family: 'Menlo', monospace;
+    font-size: 12px;
+    display: inline-block;
+    width: auto;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.header--engineering__terminal pre .green {
+    color: #BFC67F;
+}
+
+@media (max-width: 759px) {
+    .header--engineering__terminal pre {
+        font-size: 8px;
+    }
+}
+
+h1, h2 {
+    color: #000;
+}
+
+/**
+ * Footer link list...
+ */
+.meta-link-list {
+    padding-top: 12px;
+    list-style: none
+}
+
+.meta-link-list li {
+    margin-bottom: 12px
+}
+
+.meta-link-list li .footnote {
+    font-weight: 500;
+    margin-top: 0
+}
+
+.meta-link-list em {
+    font-style: normal
+}
+
+.meta-link-list a {
+    display: inline-block;
+    line-height: 1.2
+}
+
+.meta-link-list a:hover {
+    text-decoration: none !important
+}
+
+.meta-link-list a:hover span {
+    text-decoration: underline
+}
+
+.projects {
+    padding-top: 0;
+    padding-left: 24px;
+}

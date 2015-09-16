@@ -1,42 +1,515 @@
----
-layout: default
-tag: our-blog
----
+<!DOCTYPE html>
+<html>
 
-<header class="header header--blog header--blog-home with-gradient">
+<head>
+    <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <script type="text/javascript" src="http://forge.dosomething.org/dist/modernizr.js"></script>
+
+    <link rel="stylesheet" href="http://forge.dosomething.org/dist/forge.css" media="screen, projection" type="text/css">
+    <link rel="stylesheet" href="/tech.css" media="screen, projection" type="text/css">
+</head>
+
+<body>
+<div class="chrome">
     <div class="wrapper">
-        <h1 class="header__title">{{ site.name }}</h1>
-        <p class="header__subtitle">{{ site.description }}</p>
+        <nav class="navigation -white -floating">
+            <a class="navigation__logo" href="https://www.dosomething.org"><span>DoSomething.org</span></a>
+        </nav>
+
+        <header class="header -centered header--engineering">
+            <div class="wrapper">
+                <h1 class="header__title">DoSomething.org Engineering</h1>
+            </div>
+            <div class="header--engineering__terminal">
+                <pre>
+                    Welcome to Ubuntu 14.04.2 LTS (GNU/Linux 3.13.0-53-generic x86_64)
+
+                    * Documentation:  https://help.ubuntu.com/
+
+                    System information as of Wed Sep 16 10:01:06 EDT 2015
+
+                    System load:  0.38              Processes:           93
+                    Usage of /:   7.6% of 39.34GB   Users logged in:     0
+                    Memory usage: 39%               IP address for eth0: 10.0.2.15
+                    Swap usage:   0%                IP address for eth1: 10.11.12.13
+
+                    Welcome to the DoSomething.org web platform Vagrant playland!
+
+                    If this is the first time you ran "vagrant up", make sure to run the setup
+                    script: setup-www
+
+                    And be sure to read the documentation on the dosomething wiki to finish building
+                    your local environment:
+
+                    https://github.com/DoSomething/dosomething/wiki/Building-your-local-environment
+
+
+                    Last login: Wed Sep 16 10:01:06 2015 from northstar.dev
+                    dosomething@dev:~$ cd /var/www/dev.dosomething.org/
+                    dosomething@dev:/var/www/dev.dosomething.org$ bin/ds build --install
+                         _____          ___
+                        /  /::\        /  /\
+                       /  /:/\:\      /  /:/_
+                      /  /:/  \:\    /  /:/ /\
+                     /__/:/ \__\:|  /  /:/ /::\
+                     \  \:\ /  /:/ /__/:/ /:/\:\
+                      \  \:\  /:/  \  \:\/:/~/:/
+                       \  \:\/:/    \  \::/ /:/
+                        \  \::/      \__\/ /:/
+                         \__\/         /__/:/
+                                       \__\/
+                    Wiping html directory...
+                    Running drush make...
+                    Beginning to build /var/www/dev.dosomething.org/build-dosomething.make.                                                <span class='green'>[ok]</span>
+                    drupal-7.39 downloaded.                                                                                                <span class='green'>[ok]</span>
+                    dosomething found in ./lib/profiles/dosomething.                                                                       <span class='green'>[ok]</span>
+                    Found makefile: dosomething.make                                                                                       <span class='green'>[ok]</span>
+                    Project addressfield contains 2 modules: addressfield_example, addressfield.
+                    addressfield-7.x-1.0-beta5 downloaded.                                                                                 <span class='green'>[ok]</span>
+                    addressfield patched with addressfield-element_info-970048-71.patch.                                                   <span class='green'>[ok]</span>
+                    Generated PATCHES.txt file for addressfield                                                                            <span class='green'>[ok]</span>
+                    Project admin_menu contains 3 modules: admin_menu_toolbar, admin_devel, admin_menu.
+                    admin_menu-7.x-3.0-rc5 downloaded.                                                                                     <span class='green'>[ok]</span>
+                    Project apachesolr contains 3 modules: apachesolr_access, apachesolr, apachesolr_search.
+                    apachesolr-7.x-1.6 downloaded.                                                                                         <span class='green'>[ok]</span>
+                    Project apachesolr_confgen contains 3 modules: apachesolr_confgen_advanced_settings, apachesolr_confgen_textfiles, apacheso
+                    lr_confgen.
+                    apachesolr_confgen-7.x-1.1 downloaded.                                                                                 <span class='green'>[ok]</span>
+                    Project apachesolr_multilingual contains 2 modules: apachesolr_multilingual_confgen, apachesolr_multilingual.
+                    apachesolr_multilingual-7.x-1.3 downloaded.                                                                            <span class='green'>[ok]</span>
+                    apachesolr_views-7.x-1.0-beta2 downloaded.                                                                             <span class='green'>[ok]</span>
+                    blockreference-7.x-1.16 downloaded.                                                                                    <span class='green'>[ok]</span>
+                    cdn-7.x-2.6 downloaded.                                                                                                <span class='green'>[ok]</span>
+                    Project ctools contains 10 modules: ctools_access_ruleset, bulk_export, ctools_plugin_example, page_manager, ctools_custom_
+                    content, stylizer, ctools_ajax_sample, views_content, term_depth, ctools.
+                    ctools-7.x-1.8 downloaded.                                                                                             <span class='green'>[ok]</span>
+                    Project date contains 11 modules: date_context, date_migrate_example, date_migrate, date_repeat_field, date_all_day, date_r
+                    epeat, date_popup, date_views, date_api, date_tools, date.
+                    date-7.x-2.8 downloaded.                                                                                               <span class='green'>[ok]</span>
+                    diff-7.x-3.2 downloaded.                                                                                               <span class='green'>[ok]</span>
+                    Project entity contains 2 modules: entity_token, entity.
+                    entity-7.x-1.6 downloaded.                                                                                             <span class='green'>[ok]</span>
+                    entity_autocomplete-7.x-1.0-beta3 downloaded.                                                                          <span class='green'>[ok]</span>
+                    Project entity_translation contains 3 modules: entity_translation_upgrade, entity_translation_i18n_menu, entity_translation.
+                    entity_translation-7.x-1.0-beta4 downloaded.                                                                           <span class='green'>[ok]</span>
+                    entityconnect-7.x-1.0-rc1 downloaded.                                                                                  <span class='green'>[ok]</span>
+                    Project entityreference contains 2 modules: entityreference_behavior_example, entityreference.
+                    entityreference-7.x-1.1 downloaded.                                                                                    <span class='green'>[ok]</span>
+                    features-7.x-2.2 downloaded.                                                                                           <span class='green'>[ok]</span>
+                    field_collection-7.x-1.0-beta8 downloaded.                                                                             <span class='green'>[ok]</span>
+                    field_group-7.x-1.4 downloaded.                                                                                        <span class='green'>[ok]</span>
+                    file_entity-7.x-2.0-alpha3 downloaded.                                                                                 <span class='green'>[ok]</span>
+                    Project flag contains 3 modules: flag_bookmark, flag, flag_actions.
+                    flag-7.x-3.5 downloaded.                                                                                               <span class='green'>[ok]</span>
+                    Project google_analytics contains a module named googleanalytics.
+                    google_analytics-7.x-2.1 downloaded.                                                                                   <span class='green'>[ok]</span>
+                    Project http_client contains 2 modules: http_client_oauth, http_client.
+                    http_client-7.x-2.4 downloaded.                                                                                        <span class='green'>[ok]</span>
+                    Project imagecache_actions contains 8 modules: imagecache_canvasactions, image_styles_admin, imagecache_customactions, imag
+                    ecache_coloractions, image_effects_text_test, image_effects_text, imagecache_autorotate, imagecache_actions.
+                    imagecache_actions-7.x-1.5 downloaded.                                                                                 <span class='green'>[ok]</span>
+                    Project i18n contains 16 modules: i18n_variable, i18n_select, i18n_redirect, i18n_sync, i18n_forum, i18n_translation, i18n_
+                    user, i18n_node, i18n_menu, i18n_block, i18n_string, i18n_contact, i18n_path, i18n_taxonomy, i18n_field, i18n.
+                    i18n-7.x-1.11 downloaded.                                                                                              <span class='green'>[ok]</span>
+                    l10n_update-7.x-1.0 downloaded.                                                                                        <span class='green'>[ok]</span>
+                    libraries-7.x-2.2 downloaded.                                                                                          <span class='green'>[ok]</span>
+                    link-7.x-1.2 downloaded.                                                                                               <span class='green'>[ok]</span>
+                    markdown-7.x-1.2 downloaded.                                                                                           <span class='green'>[ok]</span>
+                    Project metatag contains 10 modules: metatag_panels, metatag_twitter_cards, metatag_opengraph, metatag_google_plus, metatag
+                    _views, metatag_context, metatag_dc, metatag_devel, metatag_facebook, metatag.
+                    metatag-7.x-1.4 downloaded.                                                                                            <span class='green'>[ok]</span>
+                    mobilecommons-7.x-1.1 downloaded.                                                                                      <span class='green'>[ok]</span>
+                    module_filter-7.x-2.0-alpha2 downloaded.                                                                               <span class='green'>[ok]</span>
+                    new_relic_rpm-7.x-1.0-alpha2 downloaded.                                                                               <span class='green'>[ok]</span>
+                    Project oauth contains 2 modules: oauth_common, oauth_common_providerui.
+                    oauth-7.x-3.2 downloaded.                                                                                              <span class='green'>[ok]</span>
+                    oauth patched with oauth-OAuth-PHP-library-Authorization-Header-parameters-separator-2328685-1.patch.                  <span class='green'>[ok]</span>
+                    Generated PATCHES.txt file for oauth                                                                                   <span class='green'>[ok]</span>
+                    optimizely-7.x-2.14 downloaded.                                                                                        <span class='green'>[ok]</span>
+                    pathauto-7.x-1.2 downloaded.                                                                                           <span class='green'>[ok]</span>
+                    potx-7.x-1.0 downloaded.                                                                                               <span class='green'>[ok]</span>
+                    redirect-7.x-1.0-rc1 downloaded.                                                                                       <span class='green'>[ok]</span>
+                    redis-7.x-2.6 downloaded.                                                                                              <span class='green'>[ok]</span>
+                    Project restful contains 4 modules: restful_example, restful_angular_example, restful_token_auth, restful.
+                    restful-7.x-1.0-rc5 downloaded.                                                                                        <span class='green'>[ok]</span>
+                    seckit-7.x-1.9 downloaded.                                                                                             <span class='green'>[ok]</span>
+                    Project services contains 4 modules: rest_server, xmlrpc_server, services_oauth, services.
+                    services-7.x-3.12 downloaded.                                                                                          <span class='green'>[ok]</span>
+                    Found makefile: services.make                                                                                          <span class='green'>[ok]</span>
+                    spyc downloaded from https://raw.github.com/mustangostang/spyc/master/Spyc.php.                                        <span class='green'>[ok]</span>
+                    stathat-7.x-1.0 downloaded.                                                                                            <span class='green'>[ok]</span>
+                    Project stringoverrides contains 2 modules: stringoverrides, stringoverrides_migrate.
+                    stringoverrides-7.x-1.8 downloaded.                                                                                    <span class='green'>[ok]</span>
+                    strongarm-7.x-2.0 downloaded.                                                                                          <span class='green'>[ok]</span>
+                    taxonomy_access_fix-7.x-2.1 downloaded.                                                                                <span class='green'>[ok]</span>
+                    title-7.x-1.x-dev downloaded.                                                                                          <span class='green'>[ok]</span>
+                    token-7.x-1.5 downloaded.                                                                                              <span class='green'>[ok]</span>
+                    Project uuid contains 5 modules: uuid_default_entities_example, uuid_services_example, uuid_services, uuid_path, uuid.
+                    uuid-7.x-1.0-alpha5 downloaded.                                                                                        <span class='green'>[ok]</span>
+                    uuid_features-7.x-1.0-alpha4 downloaded.                                                                               <span class='green'>[ok]</span>
+                    Project variable contains 6 modules: variable_views, variable_realm, variable_admin, variable_example, variable_store, variable.
+                    variable-7.x-2.5 downloaded.                                                                                           <span class='green'>[ok]</span>
+                    varnish-7.x-1.0-beta2 downloaded.                                                                                      <span class='green'>[ok]</span>
+                    view_unpublished-7.x-1.2 downloaded.                                                                                   <span class='green'>[ok]</span>
+                    Project views contains 2 modules: views_ui, views.
+                    views-7.x-3.11 downloaded.                                                                                             <span class='green'>[ok]</span>
+                    views_data_export-7.x-3.0-beta8 downloaded.                                                                            <span class='green'>[ok]</span>
+                    Project xmlsitemap contains 9 modules: xmlsitemap_custom, xmlsitemap_engines, xmlsitemap_node, xmlsitemap_user, xmlsitemap_taxonomy, xmlsitemap_menu, xmlsitemap_i18n, xmlsitemap_modal, xmlsitemap.
+                    xmlsitemap-7.x-2.0 downloaded.                                                                                         <span class='green'>[ok]</span>
+                    external_auth cloned from https://github.com/DoSomething/drupal-external-auth.git.                                     <span class='green'>[ok]</span>
+                    Checked out revision c6bda54.                                                                                          <span class='green'>[ok]</span>
+                    message_broker_producer cloned from https://github.com/DoSomething/message_broker_producer.git.                        <span class='green'>[ok]</span>
+                    Project devel contains 3 modules: devel_generate, devel_node_access, devel.
+                    devel-7.x-1.4 downloaded.                                                                                              <span class='green'>[ok]</span>
+                    Project coder contains 6 modules: coder_upgrade, coder_review, drupalcs, bad, bad2, coder.
+                    coder-7.x-2.2 downloaded.                                                                                              <span class='green'>[ok]</span>
+                    stage_file_proxy-7.x-1.6 downloaded.                                                                                   <span class='green'>[ok]</span>
+                    dosomething_action_guide found in ./lib/modules/dosomething/dosomething_action_guide.                                  <span class='green'>[ok]</span>
+                    dosomething_api found in ./lib/modules/dosomething/dosomething_api.                                                    <span class='green'>[ok]</span>
+                    dosomething_campaign found in ./lib/modules/dosomething/dosomething_campaign/dosomething_campaign_hot_shares.          <span class='green'>[ok]</span>
+                    dosomething_campaign_group found in ./lib/modules/dosomething/dosomething_campaign_group.                              <span class='green'>[ok]</span>
+                    dosomething_campaign_run found in ./lib/modules/dosomething/dosomething_campaign_run.                                  <span class='green'>[ok]</span>
+                    dosomething_global found in ./lib/modules/dosomething/dosomething_global.                                              <span class='green'>[ok]</span>
+                    dosomething_fact found in ./lib/modules/dosomething/dosomething_fact.                                                  <span class='green'>[ok]</span>
+                    dosomething_fact_page found in ./lib/modules/dosomething/dosomething_fact_page.                                        <span class='green'>[ok]</span>
+                    dosomething_helpers found in ./lib/modules/dosomething/dosomething_helpers.                                            <span class='green'>[ok]</span>
+                    dosomething_home found in ./lib/modules/dosomething/dosomething_home.                                                  <span class='green'>[ok]</span>
+                    dosomething_image found in ./lib/modules/dosomething/dosomething_image.                                                <span class='green'>[ok]</span>
+                    dosomething_kudos found in ./lib/modules/dosomething/dosomething_kudos.                                                <span class='green'>[ok]</span>
+                    dosomething_mbp found in ./lib/modules/dosomething/dosomething_mbp.                                                    <span class='green'>[ok]</span>
+                    dosomething_metatag found in ./lib/modules/dosomething/dosomething_metatag.                                            <span class='green'>[ok]</span>
+                    dosomething_notfound found in ./lib/modules/dosomething/dosomething_notfound.                                          <span class='green'>[ok]</span>
+                    dosomething_payment found in ./lib/modules/dosomething/dosomething_payment.                                            <span class='green'>[ok]</span>
+                    dosomething_reportback found in ./lib/modules/dosomething/dosomething_reportback.                                      <span class='green'>[ok]</span>
+                    dosomething_reward found in ./lib/modules/dosomething/dosomething_reward.                                              <span class='green'>[ok]</span>
+                    dosomething_search found in ./lib/modules/dosomething/dosomething_search.                                              <span class='green'>[ok]</span>
+                    dosomething_settings found in ./lib/modules/dosomething/dosomething_settings.                                          <span class='green'>[ok]</span>
+                    dosomething_signup found in ./lib/modules/dosomething/dosomething_signup.                                              <span class='green'>[ok]</span>
+                    dosomething_static_content found in ./lib/modules/dosomething/dosomething_static_content.                              <span class='green'>[ok]</span>
+                    dosomething_taxonomy found in ./lib/modules/dosomething/dosomething_taxonomy.                                          <span class='green'>[ok]</span>
+                    dosomething_uk found in ./lib/modules/dosomething/dosomething_uk.                                                      <span class='green'>[ok]</span>
+                    dosomething_user found in ./lib/modules/dosomething/dosomething_user.                                                  <span class='green'>[ok]</span>
+                    dosomething_zendesk found in ./lib/modules/dosomething/dosomething_zendesk.                                            <span class='green'>[ok]</span>
+                    paraneue_dosomething found in ./lib/themes/dosomething/paraneue_dosomething.                                           <span class='green'>[ok]</span>
+                    guzzle cloned from https://github.com/guzzle/guzzle.git.                                                               <span class='green'>[ok]</span>
+                    messagebroker-phplib cloned from https://github.com/DoSomething/messagebroker-phplib.git.                              <span class='green'>[ok]</span>
+                    messagebroker-config cloned from https://github.com/DoSomething/messagebroker-config.git.                              <span class='green'>[ok]</span>
+                    mobilecommons-php cloned from https://github.com/DoSomething/mobilecommons-php.git.                                    <span class='green'>[ok]</span>
+                    predis cloned from https://github.com/nrk/predis.git.                                                                  <span class='green'>[ok]</span>
+                    Checked out revision 4123fcd85d61354c6c9900db76c9597dbd129bf6.                                                         <span class='green'>[ok]</span>
+                    stathat downloaded from https://www.stathat.com/downloads/stathat.php.                                                 <span class='green'>[ok]</span>
+                    stripe-php cloned from https://github.com/stripe/stripe-php.                                                           <span class='green'>[ok]</span>
+                    zendesk cloned from https://github.com/zendesk/zendesk_api_client_php.                                                 <span class='green'>[ok]</span>
+                    Checked out revision 6aa9662fb1ed45b6bcc93ef9e1e4ab14685e80ac.                                                         <span class='green'>[ok]</span>
+                    Creating symlinks
+                    Linking modules
+                    Linking themes
+                    Enabling git hooks
+                    default
+                    creating db for default
+                    Install composer dependencies
+                    <span class="underline">Installing composer dependencies for Zendesk...</span>
+                    <span class="green">Loading composer repositories with package information
+                    Installing dependencies (including require-dev)</span>
+                      - Installing <span class="green">symfony/yaml</span> (v2.7.4)
+                        Downloading: 100%         
+                    
+                      - Installing <span class="green">phpunit/php-text-template</span> (1.2.1)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/phpunit-mock-objects</span> (1.2.3)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-timer</span> (1.0.7)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-token-stream</span> (1.2.2)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-file-iterator</span> (1.4.1)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-code-coverage</span> (1.2.18)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/phpunit</span> (3.7.38)
+                        Loading from cache
+                    
+                    phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+                    Writing lock file
+                    Generating autoload files
+                    <span class="underline">Installing composer dependencies for Message Broker PHPLIB...</span>
+                    <span class="green">Loading composer repositories with package information
+                    Installing dependencies (including require-dev)</span>
+                      - Installing <span class="green">videlalvaro/php-amqplib</span> (v2.5.0)
+                        Loading from cache
+                    
+                      - Installing <span class="green">symfony/yaml</span> (v2.7.4)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-text-template</span> (1.2.1)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/phpunit-mock-objects</span> (1.2.3)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-timer</span> (1.0.7)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-token-stream</span> (1.2.2)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-file-iterator</span> (1.4.1)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-code-coverage</span> (1.2.18)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/phpunit</span> (3.7.38)
+                        Loading from cache
+                    
+                    phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+                    Writing lock file
+                    Generating autoload files
+                    <span class="underline">Installing composer dependencies for Stripe PHP Library...</span>
+                    <span class="green">Loading composer repositories with package information
+                    Installing dependencies (including require-dev)</span>
+                      - Installing <span class="green">simpletest/simpletest</span> (v1.1.6)
+                        Loading from cache
+                    
+                    Writing lock file
+                    Generating autoload files
+                    Warning: Ambiguous class resolution, "SimpleReflection" was found in both "/var/www/dev.dosomething.org/html/profiles/dosomething/libraries/stripe-php/vendor/simpletest/simpletest/reflection_php4.php" and "/var/www/dev.dosomething.org/html/profiles/dosomething/libraries/stripe-php/vendor/simpletest/simpletest/reflection_php5.php", the first will be used.
+                    <span class="underline">Installing composer dependencies for Guzzle PHP Library...</span>
+                    Warning: This development build of composer is over 60 days old. It is recommended to update it by running "/usr/local/bin/composer self-update" to get the latest version.
+                    <span class="green">Loading composer repositories with package information
+                    Installing dependencies (including require-dev)</span>
+                      - Installing <span class="green">psr/log</span> (1.0.0)
+                        Loading from cache
+                    
+                      - Installing <span class="green">psr/http-message</span> (1.0)
+                        Loading from cache
+                    
+                      - Installing <span class="green">guzzlehttp/psr7</span> (1.2.0)
+                        Loading from cache
+                    
+                      - Installing <span class="green">guzzlehttp/promises</span> (1.0.2)
+                        Loading from cache
+                    
+                      - Installing <span class="green">sebastian/version</span> (1.0.6)
+                        Loading from cache
+                    
+                      - Installing <span class="green">sebastian/global-state</span> (1.0.0)
+                        Loading from cache
+                    
+                      - Installing <span class="green">sebastian/recursion-context</span> (1.0.1)
+                        Loading from cache
+                    
+                      - Installing <span class="green">sebastian/exporter</span> (1.2.1)
+                        Loading from cache
+                    
+                      - Installing <span class="green">sebastian/environment</span> (1.3.2)
+                        Loading from cache
+                    
+                      - Installing <span class="green">sebastian/diff</span> (1.3.0)
+                        Loading from cache
+                    
+                      - Installing <span class="green">sebastian/comparator</span> (1.2.0)
+                        Loading from cache
+                    
+                      - Installing <span class="green">symfony/yaml</span> (v2.7.4)
+                        Loading from cache
+                    
+                      - Installing <span class="green">doctrine/instantiator</span> (1.0.5)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpdocumentor/reflection-docblock</span> (2.0.4)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpspec/prophecy</span> (v1.5.0)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-text-template</span> (1.2.1)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/phpunit-mock-objects</span> (2.3.7)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-timer</span> (1.0.7)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-token-stream</span> (1.4.8)
+                        Downloading: 100%         
+                    
+                      - Installing <span class="green">phpunit/php-file-iterator</span> (1.4.1)
+                        Loading from cache
+                    
+                      - Installing <span class="green">phpunit/php-code-coverage</span> (2.2.3)
+                        Downloading: 100%         
+                    
+                      - Installing <span class="green">phpunit/phpunit</span> (4.8.7)
+                        Downloading: 100%         
+                    
+                    sebastian/global-state suggests installing ext-uopz (*)
+                    phpdocumentor/reflection-docblock suggests installing dflydev/markdown (~1.0)
+                    phpdocumentor/reflection-docblock suggests installing erusev/parsedown (~1.0)
+                    phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+                    Writing lock file
+                    Generating autoload files
+                    Creating default folder
+                    Installing
+                    You are about to DROP all tables in your 'dosomething' database. Do you want to continue? (y/n): y
+                    Starting Drupal installation. This takes a while. Consider using the --notify global option.                    <span class='green'>[ok]</span>
+                    Installation complete.                                                                                          <span class='green'>[ok]</span>
+                </pre>
+            </div>
+        </header>
+
+        <main role="main" class="container -padded">
+            <div class="wrapper">
+                <div class="container__block -narrow">
+                    <h2>Open Source</h2>
+                    <p>All of our work is built on open-source software. We stand on the shoulders of giants (Linux, PHP, Drupal, Laravel, Node, MySQL, MongoDB, jQuery...) and consider it our responsibility to give back.</p>
+                    <p>Here's a selection of open-source packages we've released:</p>
+                    <ul class="meta-link-list projects">
+                        <li>
+                            <a href="https://github.com/DoSomething/vision">vision</a>
+                            <span class="footnote">See where your code has been deployed and whats been tested at a glance.</span>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/DoSomething/npm-notifier">npm-notifier</a>
+                            <span class="footnote">Send notifications to Slack when a package is updated.</span>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/DoSomething/count-von-count">count-von-count</a>
+                            <span class="footnote">Parse written numbers into digits.</span>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/DoSomething/drupal-external-auth">drupal-external-auth</a>
+                            <span class="footnote">Base module for using external APIs for Drupal authentication.</span>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/DoSomething/hubot-shakeshack">hubot-shakeshack</a>
+                            <span class="footnote">A Hubot script that posts a photo of the Shake Shack cam.</span>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/DoSomething/stathat-php">stathat-php</a>
+                            <span class="footnote">Simple, modern PHP API wrapper for StatHat.</span>
+                        </li>
+
+                    </ul>
+
+                    <p>We also write all of our code <a href="https://blog.dosomething.org/we-open-sourced-our-code-heres-why-you-should-too/">in the open</a>. Our production code base & internal tools are open-sourced for inspection, improvement, and forking. Feel free to take a look at any of our projects (and if you like what you see, consider
+                        <a href="#">joining the team</a>!)</p>
+
+                    <ul class="meta-link-list projects">
+                        <li>
+                            <a href="https://github.com/DoSomething/phoenix">Phoenix</a>
+                            <span class="footnote">Our production website, powered by <a href="http://www.drupal.org">Drupal</a>.</span>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/DoSomething/forge">Forge</a>
+                            <span class="footnote">Our interface framework and pattern library.</span>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/DoSomething/northstar">Northstar</a>
+                            <span class="footnote">Our user & activity API, built with <a href="http://laravel.com">Laravel</a>.</span>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/DoSomething/aurora">Aurora</a>
+                            <span class="footnote">User admin tool. This is the human-facing frontend to Northstar.</span>
+                        </li>
+
+                    </ul>
+
+                    <p>(And yes, they're all named after superheros.)</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="container -padded blog-footer">
+            <div class="wrapper">
+                <div class="container__block -half">
+                    <h4>Catch up with our latest posts&hellip;</h4>
+                    <ul class="meta-link-list" id="tech-blog">
+                        <p class="footnote">coming soon!</p>
+                    </ul>
+                </div>
+
+                <div class="container__block -half">
+                    <h4>Awesome things&trade;</h4>
+                    <ul class="meta-link-list">
+                        <li>
+                            <a href="https://www.dosomething.org/about/who-we-are">
+                                <span>What is DoSomething.org?</span><br/>
+                                <em class="footnote">who we are & what we do</em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.dosomething.org/about/were-hiring">
+                                <span>We're hiring!</span><br/>
+                                <em class="footnote">work with us</em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.dosomething.org/about/donate-pretty-please">
+                                <span>Donate</span><br/>
+                                <em class="footnote">help us make an impact</em>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="container__block -narrow">
+                    <div class="footnote">&copy; 2015 DoSomething.org</div>
+                </div>
+            </div>
+        </footer>
+
     </div>
-</header>
+</div>
 
-{% include navigation.html %}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="//forge.dosomething.org/dist/forge.js"></script>
 
-<main role="main" class="container">
-    <div class="wrapper">
-        <div class="posts">
-            {% for post in paginator.posts %}
-            {% unless post.draft %}
-            {% unless post.redirect %}
+<script type="text/javascript">
+    jQuery(function() {
+        var $term = jQuery('.header--engineering__terminal');
 
-            {% assign on_homepage = false %}
-            {% for tag in post.tags %}
-                {% if tag == page.tag %}
-                    {% assign on_homepage = true %}
-                {% endif %}
-            {% endfor %}
+        console.log($term.height());
+        var anim = setInterval(function() {
+            if(parseInt($term.css('top')) < (-1 * $term.height()) + $('.header').height()) clearInterval(anim);
 
-            {% if on_homepage %}
-                {% include excerpt.html %}
-            {% endif %}
-            {% endunless %}
-            {% endunless %}
-            {% endfor %}
-    </div>
-</main>
+            $term.css('top', '-=12');
+        }, 200);
+    });
+</script>
 
-<nav class="container -padded">
-    <div class="wrapper">
-        {% include pagination.html %}
-    </div>
-</nav>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+    _gaq.push(['_setAccount', 'UA-493209-26']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+</html>
+
